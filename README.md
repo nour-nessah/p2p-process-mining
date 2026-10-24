@@ -18,7 +18,7 @@ see "Reproduce" below. After cleaning: 1,593,429 events, 251,654 orders.
 
 ## Part 1: Process analysis (`notebooks/01` to `04`)
 
-- Converted the XES log to Parquet (695 MB to 13 MB) and analysed it with SQL on DuckDB.
+- Converted the XES log to Parquet (695 MB to 14 MB) and analysed it with SQL on DuckDB.
 - **Data quality:** 80 orders with timestamps before 2017 were excluded. Dates have day precision only, so the order of events within a day is uncertain; I used the file row order and treat same-day order with caution.
 - **Variants:** 11,950 distinct paths. The most common (about 20% of orders) is
   Create PO Item > Vendor creates invoice > Record Goods Receipt > Record Invoice Receipt > Clear Invoice.
